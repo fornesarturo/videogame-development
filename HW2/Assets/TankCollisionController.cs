@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TankCollisionController : MonoBehaviour {
@@ -22,6 +23,10 @@ public class TankCollisionController : MonoBehaviour {
                 Destroy(gameObject);
                 Debug.Log("Collision with Floor");
                 displayText.text = transform.gameObject.tag + " lost.";
+                break;
+            case "Cannonball":
+                displayText.text = transform.gameObject.tag + " lost.";
+                Destroy(gameObject);
                 break;
         }
     }

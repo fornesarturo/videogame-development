@@ -17,7 +17,7 @@ public class TankController : MonoBehaviour {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
         transform.parent.Translate(h * speed * Time.deltaTime, 0, 0, Space.Self);
-        transform.GetChild(0).Rotate(new Vector3(10 * speed * v * Time.deltaTime, 0, 0));
+        transform.GetChild(0).Rotate(new Vector3(-10 * speed * v * Time.deltaTime, 0, 0));
 
         // Instancing
         // - We cannot create a new gameobject from scratch.
