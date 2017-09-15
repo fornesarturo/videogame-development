@@ -23,11 +23,18 @@ public class TankCollisionController : MonoBehaviour {
                 Destroy(gameObject);
                 Debug.Log("Collision with Floor");
                 displayText.text = transform.gameObject.tag + " lost.";
+                StartCoroutine("waitAndReload");
                 break;
             case "Cannonball":
                 displayText.text = transform.gameObject.tag + " lost.";
                 Destroy(gameObject);
+                StartCoroutine("waitAndReload");
                 break;
         }
+    }
+
+    IEnumerator waitAndReload() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        yield return new WaitForSeconds(2f);
     }
 }
