@@ -5,6 +5,7 @@ using UnityEngine;
 public class Waypoint : MonoBehaviour {
 
     public Waypoint[] neighbors;
+	public List<Waypoint> history;
 
 	// Use this for initialization
 	void Start () {
