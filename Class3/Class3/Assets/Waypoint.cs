@@ -6,6 +6,7 @@ public class Waypoint : MonoBehaviour {
 
     public Waypoint[] neighbors;
 	public List<Waypoint> history;
+	public float f, g;
 
 	// Use this for initialization
 	void Start () {
